@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Paint with Html5</title>	
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+
+
+
+</head>
+<body>
+    <header id="mainHeader">
+        <div id="logo">
+         
+        </div>              
+        <div id="rd">
+             
+             <div>Taille <span id="radVal"> </span> px</div>
+
+            <div id="radGroup">
+                <div class="ctrl_radius" id="decRad">
+                    <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                </div>
+                <div class="ctrl_radius" id="incRad">
+                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="saveBtn" title="Enregistrer">
+            <i class="fa fa-floppy-o" aria-hidden="true"></i>
+        </div>       
+        
+    </header>
+
+
+<!--palette de couleur!-->
+<div id="toolBar">
+    <div id="groupTools">
+        <span id="pentTool" class="spanTools currentTool" title="Outil crayon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
+        <span id="pentTool" class="spanTools" title="Outil gomme"><i class="fa fa-eraser" aria-hidden="true"></i></span>
+    </div>
+    <div id="colors"> </div> 
+
+    <div id="credit">
+        <span class="infoCRS" title="A propos"><i class="fa fa-info-circle" aria-hidden="true"></i></span>
+
+        <div class="popOver">
+            <span>Version 0.1 deloppé par <a href="http://m.daroueche.free.fr" target="_blank">mdaroueche</a></span>
+            <span><a href="http://m.daroueche.free.fr/index.php?page=contact" target="_blank"></a>contacter developpeur</span>
+           
+        </div>
+    </div>
+</div>
+	<canvas id="canvas" style="display: block">
+		Votre navigatteur ne li peut être pas la balise canvas
+	</canvas>
+
+
+
+    <script  src="js/mainApp.js"></script>
+    <script  src="js/actions.js"></script>
+</body>
+</html>
