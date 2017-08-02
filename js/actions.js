@@ -71,9 +71,7 @@ for (var i = 0; i < colors.length; i++) {
    palette.className = "color_palet";
    palette.style.backgroundColor = colors[i];
    palette.addEventListener('click', setPalette);
-   document.getElementById("colors").appendChild(palette);
-
-   
+   document.getElementById("colors").appendChild(palette);   
 };
 
 function getColor(color){
@@ -104,6 +102,22 @@ function setPalette(evt){
 }
 
 setPalette({target : document.getElementsByClassName('color_palet')[0]});
+
+
+// function pour gestion des outils 
+
+
+    //var toolContainer = __get('groupTools');
+var gomme = document.getElementById('eraserTool');
+ gomme.addEventListener('click', function(){
+   console.log(__get('groupTools').nextElementSibling);
+    this.className += ' currentTool';
+ })
+
+
+
+
+
 
 
 /*==================================
