@@ -79,11 +79,8 @@ function getColor(color){
     context.fillStyle = color;
     //changer la couleur des lihnes dans la vue 
     context.strokeStyle = color;
-
     var active = document.getElementsByClassName('active')[0];
-
     if (active) {
-
         active.className = "color_palet";
     };
 
@@ -101,22 +98,63 @@ function setPalette(evt){
 
 }
 
+// la premire couleur est sélectionée par défaut
 setPalette({target : document.getElementsByClassName('color_palet')[0]});
 
 
 // function pour gestion des outils 
 
 
-    //var toolContainer = __get('groupTools');
-var gomme = document.getElementById('eraserTool');
- gomme.addEventListener('click', function(){
-   console.log(__get('groupTools').nextElementSibling);
-    this.className += ' currentTool';
- })
+var tools = document.querySelectorAll(".spanTools");
+
+for (var i = 0; i < tools.length; i++) {
+    
+    tool  = tools[i].addEventListener('click',function(evt){
+
+        var selectedTool = this;
+        var currentItem = document.getElementsByClassName('currentTool')[0];
+
+        if (currentItem){
+
+            currentItem.classList.remove('currentTool');
+        }
+        selectedTool.classList.add('currentTool');
+        // recuperer le nom de l'outil grace à son id 
+        var selectedTool_name = selectedTool.getAttribute('id');
+        // si on choisi la gomme on met la couleur blanc   
+        if (selectedTool_name === 'eraserTool') {
+            context.fillStyle = '#fff';
+            //changer la couleur des lignes dans la vue 
+            context.strokeStyle = '#fff';
+            radius = 15;
+        }else if(selectedTool_name === 'pentTool'){
+
+            getActiveColor();
+        }
+    })
+};
+
+
+/*trouver la couleur actuellement utilisée pour dessiner*/
+
+function getActiveColor(){
+   var currentColor = document.getElementsByClassName('active')[0];   
+    if (currentColor) {
+
+        var $activeColor = currentColor.getAttribute("style").split(":");
+        var codeColor = $activeColor[1].toString();
+        console.log(codeColor.slice(0,-1));
+        
+        context.fillStyle = codeColor;
+            //changer la couleur des lignes dans la vue 
+        context.strokeStyle = codeColor;
+        dessinerPoint;
+
+    };
 
 
 
-
+}
 
 
 
