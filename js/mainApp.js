@@ -32,15 +32,18 @@ var dessinerPoint = function(e){
     // au glissement de la souris 
     if (isDraging) {
 //        on fait unelihne depuis la pos ition de la souris 
-        context.lineTo(e.clientX,e.clientY);
+       // context.lineTo(e.clientX,e.clientY);
+	    context.lineTo(e.pageX - this.offsetLeft,e.pageY - this.offsetTop);
         context.stroke();
         context.beginPath(); //commence un nouveau dessin   
     //    arc prend en param x, y angle   radius;    
-        context.arc(e.clientX, e.clientY,radius,0,2*Math.PI);
-    //    context.arc(e.offsetX, e.offsetY,radius,0,2*Math.PI);
+        //context.arc(e.clientX, e.clientY,radius,0,2*Math.PI);
+        //context.arc(e.offsetX, e.offsetY,radius,0,2*Math.PI);
+		context.arc(e.pageX - this.offsetLeft,e.pageY - this.offsetTop,radius,0,2*Math.PI);
+		
         context.fill(); // dessine une ligne 
         context.beginPath();
-        context.moveTo(e.clientX,e.clientY); // potionenement de la souris 
+        context.moveTo(e.pageX - this.offsetLeft,e.pageY - this.offsetTop); // potionenement de la souris 
     }
     
    //console.log(evt.offsetX);
