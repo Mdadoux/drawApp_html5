@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title> portfolio</title>
+	<!--<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>-->
+	<script type="text/javascript" src="js/jquery.js"></script>
+	
+	<script type="text/javascript">
+    
+    $(function() {
+
+    //Baground full page 
+	$('#add').click(function(){
+		
+		var msg = $('#new_text').val();
+		
+		$('#lister').append('<li>'+msg+'<button  style="padding:2px;" class="del">enlever</button></li>');
+		$('#new_text').val(' ');
+		
+		
+		});
+		
+		$('.del').click(function(){
+
+			$(this).parent().remove()
+			return false;
+
+		})
+		
+
+	});
+    
+    
+    
+    
+    
+    </script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+
+
+</head>
+<body>
+
+	
+<div id="autre" class="container" style="width: 800px; padding:10px;">
+	<h5>Do liste </h5>
+    
+    
+    
+    
+    <ul id="lister">
+    
+    	
+        <li>liste 2 <button  style="padding:2px;" class="del">enlever</button></li>
+    
+    
+    </ul>
+    <input name="field" type="text" id="new_text"> <input id="add" name="add" type="button" value="ajouer" 
+    style="padding:5px; width:80x;"> 
+			
+</div>
+<!--Fin du contact -->
+
+	</div>
+</body>
+</html>

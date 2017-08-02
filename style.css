@@ -18,13 +18,15 @@ body{
 
 	margin: 0;
 	padding: 0;
-	background-color: #fefefe;
+	background-color: #eff0f9;
 	margin: 0 auto;
 	font-family: 'Segoe UI ligth',arial,helvetica,sans-serif;
 
 }
 
-#canvas{cursor: default;background: #fff;display: table-cell;vertical-align: middle;border: 1px solid #dedede;box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);margin: auto;}
+#pageBody{display: flex;height:100%; }
+
+#canvas{cursor: default;background: #fff;display:border: 1px solid #dedede;box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);margin: auto; }
 
 
 #mainHeader{background-color: #3b454f;color: #d9dbde;height: 50px;line-height: 50px;position: fixed;width: 100%;top: 0;display: flex;display: -webkit-flex;
@@ -43,11 +45,13 @@ body{
     margin-right: 50px;
     
 } 
-
-#rd{width: 200px;display: flex;}
+/* pour changer le dius du dessin*/
+#rd{width: 200px;display: flex; /*background-color: #35224a;*/ }
 
 #radVal{display: inline-block;width: 30px; text-align: center;}
 #saveBtn{cursor: pointer;width: 40px;transition:all ease .3s;-webkit-transition:all ease .3s;color: #d9dbde;text-align: center;}
+
+#btnClear{cursor: pointer;}
 
 
 #mainHeader .ctrl_radius{ display: inline-block; margin-left: 15px; font-weight: bold; width: 20px; height: 20px; color: #787E84; transition:all ease-in-out .3s;

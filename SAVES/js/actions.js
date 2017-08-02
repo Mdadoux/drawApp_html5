@@ -1,6 +1,14 @@
 var toolbar = __get('toolbar');
 
 
+toolbar.style.top = (window.innerHeight)-(toolbar.style.height)/2;
+
+
+
+
+
+
+
 
 var updateRadius = function(newsRad){
     
@@ -107,10 +115,10 @@ setPalette({target : document.getElementsByClassName('color_palet')[0]});
 
 
 /*==================================
-    sauvegarder une image
+    sauve garder une image
 ===================================*/
 
-var saveBtn = __get('saveBtn');// boouton souvegarder
+var saveBtn = __get('saveBtn');
 
 saveBtn.addEventListener('click',saveImage);
 
@@ -121,11 +129,3 @@ function saveImage(){
 
     window.open(data,'_blank','location=0, scrollbars=0,scrollbars=0');
 }
-
-/*==================
- nettoyer le canvas 
-====================*/
-var clearBtn = __get("btnClear");
- clearBtn.addEventListener('click',function(){
-    context.clearRect(0, 0, canvas.width, canvas.height);
- });

@@ -1,0 +1,113 @@
+html,body{
+	height: 100%;}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+body{
+
+
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	margin: 0 auto;
+	font-family: 'Segoe UI ligth',arial,helvetica,sans-serif;
+
+}
+
+
+
+#saveBtn{
+	float: left;
+	margin-left: 20px;
+	border:1px solid #dedede;
+	padding: 0 5px;
+	width: 30px;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 15px;
+	cursor: pointer;	
+	
+}
+
+#canvas{
+	cursor: default;
+	background: #dedede;
+}
+
+#rd{
+	float: left;
+}
+
+#colorBar{
+    position: fixed;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background: #282828;
+    color: white;
+    line-height:50px ; 
+    padding:0 10px;
+    
+}
+
+.ctrl_radius{
+    display: inline-block;
+    margin-left: 15px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    background: #666;
+    text-align: center;
+    line-height: 20px;
+    cursor: default;
+}
+
+#colors{
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+
+
+}
+
+.clear{
+	
+	clear:both;
+
+
+}
+.color_palet.active{
+	border: 2px solid white;
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.55);
+
+}
+.color_palet{
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	margin-left: 10px;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.47),0 0px 1px rgba(0, 0, 0, 0.55);
+}
+
+
+#toolbar{
+	position: absolute;
+	left: 10px;
+	border: 1px solid #ccc;
+	width:180px;
+	top: 20%; 
+	padding: 10px;
+
+}
+
+#toolbar span{
+
+	display: block;
+	width: 25px;
+	height: 25px; 
+	border:1px solid #dedede;
+	cursor: pointer;
+}

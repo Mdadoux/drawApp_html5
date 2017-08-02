@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>New one page portfolio</title>	
+	
+	<link rel="stylesheet" type="text/css" href="style.css">
+        <style>
+           ::selection {background-color: none; }
+	::-moz-selection { background-color: none;}
+
+        </style>
+
+
+</head>
+<body>
+    <div id="colorBar">
+        
+        <div id="rd">
+             
+        Radius <span id="radVal"> </span>
+        <div class="ctrl_radius" id="decRad">-</div>
+        <div class="ctrl_radius" id="incRad">+</div>
+        </div>
+        <div id="saveBtn">
+            save
+        </div>
+
+
+    <!--palette de couleur!-->
+        <div id="colors">
+            
+
+        </div> 
+        <div class="clear"></div>
+        
+    </div>
+
+	<canvas id="canvas" style="display: block">
+		Votre navigatteur ne li peut être pas la balise canvas
+	</canvas>
+
+    <div id="toolbar">
+
+        <span id="line">ligne</span> 
+        <span id="rect"> rectangle</span> 
+        <span id="cer">cercle</span> 
+        <span id="gom">gomme</span> 
+
+
+    </div>
+
+
+    <script  src="js/mainApp.js"></script>
+    <script  src="js/actions.js"></script>
+</body>
+</html>
