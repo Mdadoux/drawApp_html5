@@ -162,17 +162,24 @@ function getActiveColor(){
     sauvegarder une image
 ===================================*/
 
+
+function saveImage(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
+}
+
+
 var saveBtn = __get('saveBtn');// boouton souvegarder
+saveBtn.addEventListener('click', saveImage(this, 'canvas', 'imageFromCanvas.png'),false);
 
-saveBtn.addEventListener('click',saveImage);
-
+/*
 function saveImage(){
     var data = canvas.toDataURL();
-    var left  = (window.innerWidth)/2 ,
-        top = (window.innerHeight)/2;  
-
-    window.open(data,'_blank','location=0, scrollbars=0,scrollbars=0');
+    var left  = (window.innerWidth)/2,
+        top = (window.innerHeight)/2; 
+    window.open(data,'_blank','location=0, menubar=0');
 }
+*/
 
 /*==================
  nettoyer le canvas 

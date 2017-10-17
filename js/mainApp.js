@@ -1,7 +1,8 @@
     var canvas = document.getElementById('canvas');
-    var context = canvas.getContext( '2d' );
-    
-    var radius =  5;
+    var context = canvas.getContext( '2d' );   
+   
+
+    var radius =  15;
     var isDraging = false;
 	var cvH =  600;
 	var cvW = 800;
@@ -14,7 +15,10 @@ window.onresize= function(){
     var image = context.getImageData(0,0,canvas.width,canvas.height);
     canvas.width = cvW;
     canvas.height = cvH;
-    context.putImageData(image,0,0);
+    context.putImageData(image,0,0);    
+
+   
+
 }
 
 
@@ -60,3 +64,11 @@ var desengage = function(){
 canvas.addEventListener('mousedown', engage);
 canvas.addEventListener('mouseup', desengage);
 canvas.addEventListener('mousemove',dessinerPoint);
+
+
+
+function finillCanvas (){
+     context.fillStyle = "#fff";
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+}
